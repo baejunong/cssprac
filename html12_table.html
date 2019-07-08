@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표 관련 태그들</title>
+<style type="text/css">
+table, th, td {
+	border: 1px solid black;
+}
+table {
+	width: 60%;
+	text-align: center;
+	margin: auto; /* 표 자제 가운데 정렬 */
+}
+</style>
+</head>
+<body>
+	<!-- 배경색를  행 위주로  -->
+	<table>
+		<caption>
+			<h3>요금표</h3>
+		</caption>
+		<thead  style="background-color: gray;">
+			<tr>
+				<th>방이름</th>
+				<th>대상</th>
+				<th>크기</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody style="background-color: olive;">
+			<tr style="background-color: purple;">
+				<td>유채방</td>
+				<td>여성</td>
+				<td rowspan="3">4인실</td>
+				<td rowspan="4">1인 20,000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">동백방</td>
+				<td>동성</td>
+			</tr>
+			<tr>
+				<td>가족</td>
+			</tr>
+			<tr>
+				<td>천혜향방</td>
+				<td>누구나</td>
+				<td>2인실</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<!-- 배경색을 열 위주로 : col, colgroup -->
+	<table>
+		<col>
+		<col style="background-color: skyblue;">
+		<colgroup span="2" style="background-color: silver;">
+		<caption>
+			<h3>요금표</h3>
+		</caption>
+		<thead>
+			<tr>
+				<th>방이름</th>
+				<th>대상</th>
+				<th>크기</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>유채방</td>
+				<td>여성</td>
+				<td rowspan="3">4인실</td>
+				<td rowspan="4">1인 20,000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">동백방</td>
+				<td>동성</td>
+			</tr>
+			<tr>
+				<td>가족</td>
+			</tr>
+			<tr>
+				<td>천혜향방</td>
+				<td>누구나</td>
+				<td>2인실</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

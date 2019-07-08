@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>form</title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+			}
+			li label{
+				width:120px;
+				float:left;
+				line-height: 20px;
+				margin-top: 10px;
+			}
+			
+			input{
+				margin-top: 10px;
+			}
+			
+		</style>
+</head>
+<body>
+<!-- 사용자에게 정보를 받아서 특정작업(jsp, 서블릿, 자바)을 할때 사용  
+	<form action="" method="" enctype="">
+		*action = "데이터가 전달되는 페이지(장소)의 경로",
+		*method = "get|post", 생략하면 get방식, 데이터를 전달하는 방식
+			get방식 : 정보를 head에 담아보낸다. 정보가 눈에보여 보안에는 취약한대신 속도가 빠르다. (적은양 처리에 적합) ex. 검색사이트의 검색창
+			post방식 : 정보를 body에 담아보낸다. 정보가 눈에 보이지않아 보안에 취약하진않고 속도가 빠른것도 느린것도 아니다. (많은양 처리에 적합)  ex. 로그인 등...
+		*enctype = 업로드 할때 사용
+		*name = 폼의 이름, 식별할때 사용	
+		
+		<fieldset> : 폼요소들을 보기쉽게 묶어주는 태그, 폼안에서 구역을 나눌때 사용(외각선을 그린다)
+			<legend></legend>	→ 외각선의 제목(구역에 대한 제목)
+			<input type="">,<select>,<textarea>
+		</fieldest>
+	</form>
+-->
+	<form action="html13_form.html" method="get">
+		<fieldset>
+			<legend>사용자 정보가 입력한 값이 value가 된다.</legend>
+			<ul>		<!-- id와 class는  css, jQuery, Ajax에서 필요한경우만 사용한다.(필수가 아님)   -->
+				<li><label>아이디 : </label><input type="text" name="id" id="id" class="id" placeholder="아이디 입력"></li>
+				<li><label>비밀번호 : </label><input type="password" name="pw" id="pw" class="pw" placeholder="비밀번호 입력"></li>
+				<li><label>이 름 : </label><input type="text" name="name" id="name" class="name" placeholder="이름 입력"></li>
+				<li><label>나 이 : </label><input type="number" name="age" id="age" class="age" placeholder="나이 입력"></li>
+				<li><label>전화번호 : </label><input type="tel" name="tel" id="age" class="age" placeholder="전화번호 입력" pattern="[0-9]{11}" required></li> 
+												 <!-- ** pattern="[0-9]{11}" → 숫자만 받는형식{받을개수} ** required → 형식에 맞지않을때 뜨는 알림(=필수요소지정)  -->
+			</ul>
+		</fieldset>
+		
+		<fieldset>
+			<legend>기타</legend>
+			<p> 성 별 : <input type="radio" name="gender" value="남">남 자		<!-- 라디오버튼 : 여러요소를 사용하지만 같은 이름을 사용 -->
+					  <input type="radio" name="gender" value="여">여 자
+			</p>
+			
+					<!-- 체크박스 : 여러요소를 사용하지만 같은 이름을 사용, 같은이름으로 여러개가 넘어온다. → 배열처리 -->
+			<p> 취미 : <input type="checkbox" name="hobby" value="축구"> 축구
+					 <input type="checkbox" name="hobby" value="야구"> 야구
+					 <input type="checkbox" name="hobby" value="농구"> 농구
+					 <input type="checkbox" name="hobby" value="배구"> 배구
+			</p>
+			
+			<p> 파일 : <input type="file"></p>
+			<p> 컬러 : <input type="color"></p>
+			<p> 날짜 : <input type="date"></p>
+			<p> 시간 : <input type="time"></p>
+			<p> 날짜시간 : <input type="datetime"></p>
+			<p> 범위 : <input type="range"></p>
+			
+				<input type="hidden" name="page" value="2">			<!-- hidden은 화면에는 안보이지만 다른정보와 함께 action이 지정한장소로 넘어간다.  -->
+				
+			<p> 거주지 : <select name="addr">			<!-- 한개만 선택 -->
+							<option> :: 선택하세요 :: </option>
+							<option value="서울">서울</option>
+							<option value="제주도">제주도</option>
+							<option value="울릉도">울릉도</option>		
+						</select>
+			</p>
+			
+			<p> 꿈 : <select name="dream" multiple size="6">			<!-- 여러개 선택  -->
+							<option>:: 선택하세요 ::</option>
+							<option value="대통령">대통령</option>
+							<option value="유투버">유투버</option>
+							<option value="군인">군인</option>
+							<option value="선생님">선생님</option>
+							<option value="개발자">개발자</option>
+						</select>
+			</p>
+			
+			<p>
+				<textarea rows="10" cols="30"> 여기에 글자를 입력하세요 </textarea>
+			</p>
+			
+			<p>
+				<input list="browsers" name="browser">
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist>
+			</p>
+		</fieldset>
+		
+		<fieldset>
+			<input type="submit"><br>			<!-- submit은 action이 지시한곳으로 정보를 전달한다. -->
+			<input type="submit" value="전달하기"><br>
+					<!-- 태그속성에서 onXXXXX이면 자바스크립트처리를 말한다.  -->
+			<input type="button" value="보내기" onclick="자바스크립트함수 호출">	
+			<button type="submit">보내기2</button>	
+		</fieldset>
+	</form>
+</body>
+</html>

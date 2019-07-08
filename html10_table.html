@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표 관련 태그들</title>
+<style type="text/css">
+ 	 table, th, td{
+ 		 border: 1px solid black;
+ 	}
+ 	table{
+ 		width: 60%;
+ 		text-align: center;
+ 		margin: auto; /* 표 자제 가운데 정렬 */
+ 	}
+</style>
+</head>
+<body>
+	<h1> 표 관련 태그 </h1>
+	<table border="1" width="500px" align="center">
+		<caption> 표의 연습</caption>
+		<tr align="center">
+			<td>1행1열</td><td>1행2열</td><td>1행3열</td>
+		</tr>
+		<tr align="center">			
+			<td>2행1열</td><td>2행2열</td><td>2행3열</td>
+		</tr>
+		<tr align="center">
+			<td>3행1열</td><td>3행2열</td><td>3행3열</td>
+		</tr>
+		<tr align="center">	
+			<td>4행1열</td><td>4행2열</td><td>4행3열</td>
+		</tr>
+	</table>
+	<hr>
+	<!-- 표만들기 태그 : table 태그 -->
+	<table border="1" width="60%" align="center">
+	    <!-- 표 제목 , 위치는 표의 위로 정해져 있다.-->
+		<caption> 표의 연습</caption>
+		<!-- 표의 헤더 : thead , 생략 가능 -->
+		<!-- thead,tfoot,tbody는 위치가 변경되어도 알아서 해당위치를 찾아 간다.  -->
+		<thead>
+			<!-- 표의 하나의 행  -->
+			<tr>
+			     <!-- 행의 제목 : 굵게,가운데정렬 , 하나의 열-->
+				<th>1행 1열</th><th>1행 2열</th><th>1행 2열</th>
+			</tr>
+		</thead>
+		<!-- 표의 푸터 -->
+		<tfoot align="center">
+			<tr>
+				<td>5행1열</td><td>5행2열</td><td>5행3열</td>
+			</tr>
+		</tfoot>
+		<!-- 표의 본문, 생략 가능 -->  
+		<tbody align="center">
+			<tr>
+				<!-- 하나의 열 -->	
+				<td>2행1열</td><td>2행2열</td><td>2행3열</td>
+			</tr>
+			<tr>
+				<td>3행1열</td><td>3행2열</td><td>3행3열</td>
+			</tr>
+			<tr>
+				<td>4행1열</td><td>4행2열</td><td>4행3열</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<table style="width: 60%; text-align: center; border: 1px solid black;">
+		<caption> 표의 연습</caption>
+		<thead>
+			<tr>
+				<th>1행 1열</th><th>1행 2열</th><th>1행 2열</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>5행1열</td><td>5행2열</td><td>5행3열</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>2행1열</td><td>2행2열</td><td>2행3열</td>
+			</tr>
+			<tr>
+				<td>3행1열</td><td>3행2열</td><td>3행3열</td>
+			</tr>
+			<tr>
+				<td>4행1열</td><td>4행2열</td><td>4행3열</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<table>
+		<caption> 표의 연습</caption>
+		<thead>
+			<tr>
+				<th>1행 1열</th><th>1행 2열</th><th>1행 2열</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>5행1열</td><td>5행2열</td><td>5행3열</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>2행1열</td><td>2행2열</td><td>2행3열</td>
+			</tr>
+			<tr>
+				<td>3행1열</td><td>3행2열</td><td>3행3열</td>
+			</tr>
+			<tr>
+				<td>4행1열</td><td>4행2열</td><td>4행3열</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+
+

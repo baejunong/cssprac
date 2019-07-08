@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표 관련 태그들</title>
+<style type="text/css">
+table, th, td {
+	border: 1px solid black;
+}
+
+table {
+	width: 60%;
+	text-align: center;
+	margin: auto; /* 표 자제 가운데 정렬 */
+}
+</style>
+</head>
+<body>
+	<!-- 행 합치기 : rowspan, 열 합치기 : colspan , 왼쪽, 위 가 살아 남는다.-->
+		<table>
+		<caption> 표의 연습</caption>
+		<thead>
+			<tr>
+				<th>방이름</th><th>대상</th><th>크기</th><th>가격</th>
+			</tr>
+		</thead>
+	
+			<tr>
+				<th>유채방</th><th>동백방</th><th>천혜향방</th>
+			</tr>
+	
+		<tbody>
+			<tr>
+				<td rowspan="2">2행1열</td><td>2행2열</td><td>2행3열</td>
+			</tr>
+			<tr>
+				<td>3행2열</td><td>3행3열</td>
+			</tr>
+			<tr>
+				<td>4행1열</td><td>4행2열</td><td>4행3열</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<table>
+		<h2><caption>요금표</caption></h2>
+		<thead>
+			<tr>
+				<th>방이름</th>
+				<th>대상</th>
+				<th>크기</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>유채방</td>
+				<td>여성</td>
+				<td rowspan="3">4인실</td>
+				<td rowspan="4">1인 20,000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">동백방</td>
+				<td>동성</td>
+			</tr>
+			<tr>
+				<td>가족</td>
+			</tr>
+			<tr>
+				<td>천혜향방</td>
+				<td>누구나</td>
+				<td>2인실</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+	
+</body>
+</html>

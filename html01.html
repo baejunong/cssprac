@@ -1,0 +1,52 @@
+<!-- html5의 문서 정의 -->
+<!DOCTYPE html>
+<!-- 루트엘리먼트(Element=요소) -->
+<html>
+<head>
+<!-- 메타데이터 : 데이터를  구조화한 데이터  -->
+<meta charset="UTF-8">
+<title>h1 ~ h6 : 헤더 태그</title>
+</head>
+<body>
+   <!--
+       HTML :하이퍼 텍스트 마크업 언어
+       HTML 요소 (Element) = 태그 : html 문서를 구성하는 요소
+             태그는 <시작태그>Content(text)</끝태그>로 구성되어있다.
+             물론, content가 없는 요소도 있고, 끝태그가 없는 요소도 있다.
+             예) <hr>, <br>    ...
+             
+       ** 모든 태그는 속성을 가질 수 있다. 속성은 시작태그에서 지정한다.
+                   속성은  일반적으로 name="value", name="value"로 사용된다.          
+   -->
+   <!-- 태그 없이 사용한 텍스트들은 줄바꿈, 띄어쓰기가 안됨  -->
+   Hello1        Welcome,
+   Hello2        Hi~~~ ,
+   Hello3        방가방가,
+   
+   <!-- 수평선 태그 : hr -->
+   <hr>
+  <!--
+       헤더 태그 : 제목을 작성할때 사용, 일반글자보다 굵다. 자동으로 줄바꿈이 된다.
+             범위를 넘으면 일반 글자로 표현 된다.
+    ** 대표적인 블록레벨 태그이다. 블록레벨태그란 한 줄 전체를 영역으로 생각한다.(자동 줄바꿈이 된다.)
+             즉, 블록레벨 태그 앞,뒤에는 줄바꿈 현상이 나타난다.
+            블록레벨 태그의 반대 개념에는 인라인 레벨 태그가 있다.
+            인라인 레벨 태그는 해당 글자만 영역으로 생각한다. 대표적인 인라인 레벨 태그 <span>         
+    -->
+    <h1>Hello</h1> 
+    <!-- 속성: 시작태그에서 작성, 속성이름="값" 속성이름="값"  -->
+    <h2 align="center">Hello</h2> 
+    <h3>Hello</h3> 
+    <!-- 스타일을 이용한 속성 : style="속성이름:값; 속성이름:값;" -->
+    <h4 style="background-color: orange;">Hello</h4> 
+    <h5 style="text-align: center;">Hello</h5> 
+    <h6>Hello</h6> 
+    <h7><span style="background-color: purple;">H</span> ello</h7> 
+    <h8>Hello</h8> 
+</body>
+</html>
+
+
+
+
+

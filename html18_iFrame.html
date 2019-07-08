@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>현재 페이지에서 다른 페이지 보여주는 태그 : iFrame</title>
+</head>
+<body>
+	<!-- iFrame : html문서 중간에 다른 html 문서를 보여 주고자 할 때 사용 -->
+	<!-- 별도의 창이 나타나서 현재 문서 사이에  배치된다. => 내부 프레임 이라고 함  -->
+	<!-- 속성 : src, width, height, name, sandbox, border:none -->
+	<div style="width: 300px; height: 200px; background-color: yellow;">
+		<h2> 여기는 본문 ,  iframe 영역이 아닌 곳</h2>
+	</div>
+	<div style="width: 300px; height: 200px; background-color: gray;">
+		<iframe src="html01.html" style="width: 200px;"></iframe>
+	</div>
+	<div style="width: 300px; height: 200px; background-color: gray;">
+		<iframe src="html01.html" style="width: 500px;"></iframe>
+	</div>
+	<div style="width: 300px; height: 200px; background-color: gray;">
+		<iframe src="html01.html" style="width: 100%;"></iframe>
+	</div>
+	<div style="width: 300px; height: 200px; background-color: gray;">
+		<iframe src="html02.html" style="width: 100%;" scrolling="no"></iframe>
+	</div>
+	<iframe src="html03.html" name="i_f" width="800px" height="600px"></iframe>
+ 	 <p><a href="html04.html" target="i_f">문서보기</a></p>
+
+	<div style="width: 300px; height: 200px; background-color: yellow;">
+		<h2> 여기는 본문,   iframe 영역이 아닌 곳</h2>
+	</div>
+</body>
+</html>

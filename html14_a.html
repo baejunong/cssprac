@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>하이퍼 링크 : a 태그</title>
+</head>
+<body>
+   <h2>원하는 사이트나 문서로 이동</h2>
+	<!-- a태그 : 원하는 문서나 사이트로 연결하기  -->
+	<!--
+	    속성 : href ="연결하고자하는 문서나 사이트 URL"
+	        target ="_blank" => 새창 열어서 연결한 사이트나 문서 보기
+	        download => 다운로드
+	       a:link =>     일반적인 링크 색 (아직 방문하지 않은 링크)
+	       a:visited =>  방문한 적이 있는 링크
+	       a:active =>   클릭한 상태의 링크
+	  -->
+   <!-- 글자 링크 -->
+   <p><a href="http://www.naver.com">naver</a></p> 	  
+   <p><a href="http://www.daum.net" target="_blank">daum</a></p> 	  
+   <p><a href="http://www.google.com" style="text-decoration: none;">google</a></p>
+   <p><a href="html01.html" style="text-decoration: none;">문서-html01</a></p>
+ 
+   <!-- 그림 링크 -->
+   <!-- <img title="풍선도움말" src="그림주소" alt="그림이 나오지 않을때 나오는 글자" >  -->
+   <!-- 크기는 비례해서 조절된 -->
+   <p><a href="http://www.naver.com" >
+   		<img alt="네이버" src="/images/naver.png">   
+   	  </a></p> 	  
+   <p><a href="http://www.daum.net" >
+        <img alt="다음" src="images/daum.png" title="눌러주세요" width="100"> 
+       </a></p> 	  
+   <p><a href="http://www.google.com" style="text-decoration: none;"> 
+   		<img alt="구글" src="images/google.png" style="width: 100px;">
+      </a></p> 
+     <p><a href="images/daum.png"  download>
+        <img alt="다음" src="images/daum.png"  width="100"> 
+       </a></p>
+  <hr />
+    <h2> 같은 문서에서 다른 위치로 이동 (name 사용)</h2>
+    <p><a href="#first">첫번째 단락</a></p>
+    <p><a href="#second">두번째 단락</a></p>
+    <p><a href="#thrid">세번째 단락</a></p>
+    <br><br><br><br><br><br>
+    <a name="first"> 첫번째 단락 </a>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <a name="second"> 두번째 단락 </a>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <a name="thrid"> 세번째 단락 </a>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+    
+    
+    
+    
+    
+</body>
+</html>
